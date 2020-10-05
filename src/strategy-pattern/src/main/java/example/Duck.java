@@ -1,12 +1,20 @@
 package example;
 
-public class Duck {
+import example.flyStrategy.FlyBehaviour;
 
-    public String display() {
-        return "Show duck";
-    }
+public class Duck implements FlyBehaviour {
 
-    public String fly() {
-        return "Show duck flying";
-    }
+  private FlyBehaviour flyBehaviour;
+
+  public Duck(FlyBehaviour flyBehaviour) {
+    this.flyBehaviour = flyBehaviour;
+  }
+
+  public String display() {
+    return "Show duck";
+  }
+
+  public String fly() {
+    return flyBehaviour.fly();
+  }
 }

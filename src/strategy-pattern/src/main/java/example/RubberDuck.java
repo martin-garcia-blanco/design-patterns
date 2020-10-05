@@ -1,14 +1,15 @@
 package example;
 
-public class RubberDuck extends Duck{
+import example.flyStrategy.NoFlyBehaviour;
+
+public class RubberDuck extends Duck {
+
+  public RubberDuck() {
+    super(new NoFlyBehaviour());
+  }
 
   @Override
   public String display() {
     return "Show Rubber duck";
-  }
-
-  @Override
-  public String fly() {
-    return "Can't fly!";
   }
 }

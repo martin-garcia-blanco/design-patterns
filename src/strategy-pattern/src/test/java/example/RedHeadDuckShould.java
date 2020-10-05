@@ -12,4 +12,10 @@ public class RedHeadDuckShould {
     RedHeadDuck redHeadDuck = new RedHeadDuck();
     assertThat(redHeadDuck.display(), is("Show Red Head duck"));
   }
+
+  @Test
+  void fly_normally() {
+    RedHeadDuck redHeadDuck = new RedHeadDuck();
+    assertThat(redHeadDuck.fly(), is("Show duck flying"));
+  }
 }

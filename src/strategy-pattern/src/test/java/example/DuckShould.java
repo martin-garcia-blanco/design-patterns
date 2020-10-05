@@ -11,4 +11,10 @@ public class DuckShould {
     Duck duck = new Duck();
     assertThat(duck.display(), is("Show duck"));
   }
+
+  @Test
+  void fly_normally() {
+    Duck duck = new Duck();
+    assertThat(duck.fly(), is("Show duck flying"));
+  }
 }

@@ -1,12 +1,19 @@
 import Beverage from "./Beverage";
 
 class Tea extends Beverage {
-    public getDescription(): string{
-        return "Tea";
+
+    constructor() {
+        super();
+        this.description = "Tea";
+    }
+
+    public getDescription(): string {
+        return this.description;
     };
-    public getCost(): number{
+
+    public getCost(): number {
         return 1.2;
     };
 }
 
-export default Tea ;
+export default Tea;

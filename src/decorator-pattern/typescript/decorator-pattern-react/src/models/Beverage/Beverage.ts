@@ -1,5 +1,10 @@
 abstract class Beverage {
-    public abstract getDescription(): string;
+    description: string = "Unknown beverage";
+
+    public getDescription(): string{
+        return this.description;
+    };
+    
     public abstract getCost(): number;
 }
 
